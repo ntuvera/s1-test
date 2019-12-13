@@ -13,6 +13,9 @@ public class Shipment {
     @Column
     private Integer trackingNumber;
 
+    @Column
+    private String name;
+
     public Shipment() {}
 
     public Long getId() {
@@ -31,4 +34,11 @@ public class Shipment {
         this.trackingNumber = trackingNumber;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

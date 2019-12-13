@@ -32,6 +32,7 @@ public class ShipmentControllerTest {
   public void getShipment_Returns200_Success () throws Exception {
     Shipment testShipment = new Shipment();
     testShipment.setTrackingNumber(123);
+    testShipment.setName("Batman");
 
     RequestBuilder requestBuilder = MockMvcRequestBuilders
         .get("/shipment/123");
@@ -40,7 +41,7 @@ public class ShipmentControllerTest {
 
     MvcResult result = mockMvc.perform(requestBuilder)
         .andExpect(status().isOk())
-        .andExpect(content().json("{\"trackingNumber\": 123 }"))
+        .andExpect(content().json("{\"trackingNumber\": 123, \"name\": \"Batman\" }"))
         .andReturn();
 
     System.out.println(result.getResponse().getContentAsString());
