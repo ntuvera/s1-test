@@ -1,7 +1,9 @@
 package com.example.clientfe.service;
 
-import org.springframework.stereotype.Service;
+import com.example.clientfe.bean.Shipment;
 
-public class ClientFEService {
+public interface ClientFEService {
+    Shipment createShipment(Shipment newShipment);
+    Shipment findByTrackingNumber(Integer trackingNumber);
 
 }
