@@ -17,10 +17,11 @@ public class ClientFEController {
 
    @PostMapping("/clientfe/addshipment")
    public Shipment createShipment(@RequestBody Shipment newShipment) {
+      System.out.println(newShipment);
       return clientFEService.createShipment(newShipment);
    }
 
-   @GetMapping("/clientfe/{trackingNumber}")
+   @GetMapping("/clientfe/shipment/{trackingNumber}")
    public Shipment createShipment(@PathVariable Integer trackingNumber) {
       return clientFEService.findByTrackingNumber(trackingNumber);
    }

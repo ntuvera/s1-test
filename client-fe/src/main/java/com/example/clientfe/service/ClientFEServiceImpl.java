@@ -12,6 +12,7 @@ public class ClientFEServiceImpl implements ClientFEService {
 
     @Override
     public Shipment createShipment(Shipment newShipment) {
+        System.out.println(newShipment);
         return shipmentClient.createShipment(newShipment);
     }
     @Override
